@@ -8,7 +8,7 @@ export default function Events() {
   const [category, setCategory] = useState("")
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/events?search=${search}&category=${category}`)
+    fetch(`${import.meta.env.VITE_BASE_URL}/api/events?search=${search}&category=${category}`)
       .then(res => res.json())
       .then(setEvents)
   }, [search, category])

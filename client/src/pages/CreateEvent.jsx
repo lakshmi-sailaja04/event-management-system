@@ -29,7 +29,7 @@ export default function CreateEvent() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/events", {
+      const res = await fetch(`${import.meta.env.VITE_BASE_URL}/api/events`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

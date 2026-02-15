@@ -9,8 +9,8 @@ export default function EventDetails() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/events/${id}`)
-      .then(res => res.json())
+    fetch(`${import.meta.env.VITE_BASE_URL}/api/events/${id}`)
+      .then((res) => res.json())
       .then(setEvent)
       .catch(() => setEvent(null));
   }, [id]);
@@ -27,13 +27,13 @@ export default function EventDetails() {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/registrations/${id}`,
+        `${import.meta.env.VITE_BASE_URL}/api/registrations/${id}`,
         {
           method: "POST",
           headers: {
-            Authorization: `Bearer ${token}`, 
+            Authorization: `Bearer ${token}`,
           },
-        }
+        },
       );
 
       const data = await res.json();
@@ -70,16 +70,14 @@ export default function EventDetails() {
           onClick={handleRegister}
           disabled={registered || loading}
           className={`mt-6 w-full py-2 rounded text-white ${
-            registered
-              ? "bg-gray-400"
-              : "bg-green-600 hover:bg-green-700"
+            registered ? "bg-gray-400" : "bg-green-600 hover:bg-green-700"
           }`}
         >
           {loading
             ? "Registering..."
             : registered
-            ? "Registered"
-            : "Register Now"}
+              ? "Registered"
+              : "Register Now"}
         </button>
       </div>
     </>
