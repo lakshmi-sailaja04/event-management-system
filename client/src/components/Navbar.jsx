@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <div className="bg-blue-600 text-white px-4 md:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-3">
-      <h1 className="font-bold text-xl">Bellcorp Event Management Application</h1>
+      <h1 className="font-bold text-xl">Event Management Application</h1>
 
       <div className="flex flex-wrap gap-3">
         <Link
