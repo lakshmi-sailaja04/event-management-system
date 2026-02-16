@@ -1,4 +1,4 @@
-# Bellcorp Event Management Application
+# Event Management Application
 
 A full-stack Event Discovery and Registration platform built using the MERN stack.
 Users can browse events, search and filter dynamically, register for events, and manage their personal dashboard.
@@ -137,4 +137,8 @@ Event
 
 ## Live Demo
 
-Deployment links will be updated after hosting on Vercel (Frontend) and Render (Backend).
+Frontend (Vercel):
+https://event-management-system-eosin.vercel.app
+
+Backend (Render):
+https://event-management-api-kzhw.onrender.com
